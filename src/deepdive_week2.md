@@ -59,7 +59,7 @@ Web Container는 Servlet과 JSP를 실행할 수 있는 환경을 제공하며, 
 - JSP(Java Server Pages)
   → HTML 내부에서 자바 코드를 사용할 수 있도록 만든 서버 측 페이지 기술
 
-
+![Web Server와 WAS 구조](./images/was.png)
 
 동적 요청이 들어오면 Web Container는 요청을 처리할 스레드를 할당하고 Servlet을 실행한다. 이후 Servlet은 서버 사이드 코드를 수행하고 데이터베이스와 연동한 뒤 결과를 반환한다.
 
@@ -73,6 +73,16 @@ Web Container는 Servlet과 JSP를 실행할 수 있는 환경을 제공하며, 
 
 
 대표적인 WAS에는 Tomcat이 있다.
+
+---
+
+| 구분 | Web Server | WAS(Web Application Server) |
+| --- | --- | --- |
+| 처리 대상 | 정적 컨텐츠(HTML, CSS, JS, 이미지) | 동적 컨텐츠(로그인, 회원가입, 게시글 조회 등) |
+| 주요 역할 | HTTP 요청을 받아 정적 리소스 전달 | 서버 측 코드 실행 및 비즈니스 로직 처리 |
+| 동작 방식 | 저장된 파일을 그대로 반환 | Servlet/JSP 실행 후 결과 생성 |
+| 데이터베이스 연동 | 없음 | 데이터베이스와 연동하여 데이터 처리 |
+| 대표 소프트웨어 | NGINX, Apache | Tomcat |
 
 ---
 
